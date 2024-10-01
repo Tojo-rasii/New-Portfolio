@@ -1,0 +1,326 @@
+@media only screen and (max-width: 140px) {
+
+    #headerMobile section article:last-child figure a p {
+        display: none;
+    }
+
+    #headerMobile section article:last-child {
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 220px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #headerMobile section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #headerMobile section article:nth-child(2) {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1em !important;
+    }
+
+    #headerMobile section article:last-child {
+        min-width: 100% !important;
+        min-height: 100%;
+    }
+
+    @keyframes mobile {
+        0% {
+            left: -60%;
+            min-width: 0;
+
+        }
+
+        100% {
+            left: 0;
+            min-width: 100% !important;
+
+        }
+    }
+
+    #headerMobile section article:last-child figure {
+        gap: 0.5em !important;
+    }
+
+    #headerMobile section article:last-child figure a {
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        margin: 0 !important;
+    }
+
+    #logo-mobile {
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 1em;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture p:nth-child(2) {
+        text-wrap: wrap;
+        font-size: 2.7em;
+    }
+
+
+    main section:nth-child(1) article picture span button {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #Apropos article:nth-child(2) picture:nth-child(1) div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Apropos article:nth-child(2) picture:nth-child(1) div figure {
+        min-width: 70vw;
+        height: 20vh;
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    nav {
+        display: flex;
+        gap: 1em;
+    }
+
+    nav article p {
+        display: none;
+    }
+
+    .dark-mode nav article i,
+    nav article i {
+        cursor: pointer;
+        background: var(--linear) !important;
+        color: #fff;
+        outline: none;
+    }
+
+    nav article i:hover {
+        scale: 1.1;
+    }
+
+    main section:nth-child(1) article picture span {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    main section:nth-child(1) article picture span button {
+        width: 80% !important;
+    }
+
+    #Services article picture p {
+        text-wrap: wrap;
+    }
+
+    :where(#Services, #Competences) article:nth-child(1) p {
+        text-align: center;
+    }
+
+    #Services article:nth-child(1) p::before {
+        content: '';
+        background-image: none;
+
+    }
+
+
+
+}
+
+@media only screen and (max-width: 550px) {
+    nav article p {
+        max-width: 20vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    html {
+        font-size: 0.8em;
+    }
+
+    #headerMobile {
+        display: block;
+    }
+
+    #headerDesktop {
+        display: none;
+    }
+
+    main section:nth-child(1) {
+        max-height: 100%;
+    }
+
+    main section:nth-child(1) article {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 1.5em;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    main section:nth-child(1) article picture:nth-child(1) {
+        margin-left: 0 !important;
+        gap: 1.5em !important;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture p:nth-child(3) {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture:nth-child(2) {
+        margin-right: 0 !important;
+    }
+
+    main section:nth-child(1) article picture span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture:nth-child(2) {
+        scale: 0.5;
+    }
+
+
+    #Apropos article:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    #Apropos article:nth-child(2) picture:nth-child(1) div figure {
+        width: 40vw;
+        height: 25vh;
+        gap: 1em;
+    }
+
+    #Apropos article:nth-child(2) picture:nth-child(1) div {
+        gap: 2em;
+    }
+
+    main section:last-child figure {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+
+    main section:last-child figure article picture img {
+        height: 50vh;
+    }
+
+    main section:last-child figure article:nth-child(2) {
+        width: 85%;
+        margin-bottom: 2em;
+    }
+
+    footer section {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+        align-items: center;
+    }
+    #emailFoot{
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 1080px) {
+    main section:nth-child(1) article {
+        padding: 0;
+    }
+
+    main section:nth-child(1) article picture:nth-child(1) {
+        margin-left: 3em;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture p:nth-child(3) {
+        width: 70%;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture:nth-child(2) {
+        margin-right: 2em;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
+        margin-left: -0.5em;
+    }
+
+    main section:nth-child(1) article picture span button {
+        width: 38%;
+    }
+
+    #Calque_1 {
+        margin-top: -32em;
+        margin-left: 2.4em;
+        fill: #f4f4f4;
+    }
+
+    #Projets article:nth-child(3) {
+        display: block;
+        font-size: 1.3em;
+    }
+
+    #Projets article:nth-child(2) div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Projets article:nth-child(2) div:where(:nth-child(1), :nth-child(3)) {
+        display: none;
+    }
+
+    #Projets article:nth-child(2) div:nth-child(2) picture {
+        width: 90%;
+    }
+
+    #Apropos article:nth-child(2) {
+        padding-inline: 1em;
+    }
+
+    main section:last-child figure {
+        width: 95%;
+    }
+
+    footer section:nth-child(2) {
+        padding: 2em 4em;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+
+
+    main section:nth-child(1) article:nth-child(1) picture:nth-child(2) {
+        scale: 0.9;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture p:nth-child(1) {
+        font-size: 1.2em;
+    }
+
+    main section:nth-child(1) article:nth-child(1) picture p:nth-child(2) {
+        font-size: 2.7em;
+    }
+}

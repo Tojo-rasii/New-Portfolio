@@ -1,0 +1,35 @@
+#Services article picture {
+    animation: slide-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+#Projets article:nth-child(2) picture {
+    animation: slide-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+#Competences article:nth-child(2) picture {
+    animation: slide-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+#Apropos article:nth-child(2) picture:nth-child(1) div figure {
+    animation: slide-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
