@@ -387,6 +387,7 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     height: auto;
     border-bottom-left-radius: 60%;
     object-fit: cover;
+    z-index: 9999;
 }
 
 #Services {
@@ -450,8 +451,8 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     transition: 0.1s;
 }
 
-#Services article picture:nth-child(1):hover {
-    translate: -5% -5%;
+#Services article picture:hover {
+    translate: 0 -5%;
 }
 
 #Services article picture:where(:nth-child(2), :nth-child(3)):hover {
@@ -459,7 +460,7 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
 }
 
 #Services article picture:nth-child(4):hover {
-    translate: 5% -5%;
+    translate: 0 -5%;
 }
 
 #Services article picture p {
@@ -483,6 +484,36 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     flex-direction: column;
     gap: 2.5em;
     align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00000067;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+}
+
+.articleOverlay {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    z-index: 99999999;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.articleOverlay picture {
+    display: flex;
+    flex-direction: row;
+}
+
+.articleOverlay picture img {
+    width: 80%;
+    height: auto;
 }
 
 #Projets {
@@ -514,114 +545,79 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     mix-blend-mode: overlay;
 }
 
+
 #Projets article:nth-child(2) {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 2em;
     justify-content: center;
-    width: 95%;
-
-}
-
-#Projets article:nth-child(2) div:nth-child(2) {
-    display: flex;
-    gap: 2em;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-  
-#Projets article:nth-child(2) div:nth-child(2) picture {
-    background: #f4f4f4;
-    padding: 1.3em;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 70%;
-    outline: 1px solid rgb(228, 228, 228);
-    transition: background-color 0.1s;
-    transform-origin: center top;
-    scale: 1;
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture:hover {
-    cursor: pointer !important;
-
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figure {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    border-radius: 0.5em;
-    overflow: hidden;
-}
-
-#Projets article:nth-child(2) picture img {
     width: 100%;
-    height: 30vh;
-    object-fit: cover;
-    border-radius: 0.5em;
-    transition: 0.1s;
 }
 
-#Projets article:nth-child(2) picture img:hover {
-    scale: 1.2;
-    opacity: 0.9;
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figcaption {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-    gap: 1.5em;
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figcaption p {
-    cursor: pointer;
-
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figcaption p:nth-child(1) {
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--primary);
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figcaption p:nth-child(3) {
+.wrapper {
+    width: 100%;
+    gap: 2em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+}
+
+#listProject {
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
+    grid-auto-flow: column;
+    align-self: center;
+    grid-auto-columns: calc((33.2%) - 12px); */
+    align-items: center;
+    gap: 1.5em;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+/* #listProject #pic {
+    margin-left: 1em;
+} */
+
+#listProject #pic {
+    display: flex;
+    flex-direction: column;
     gap: 1em;
-}
-
-#Projets article:nth-child(2) div:nth-child(2) picture figcaption p:nth-child(3) span {
-    outline: 1px solid #d9d9d9;
-    width: max-content;
+    width: 20em;
     background: #f4f4f4;
-    color: var(--primary);
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
+    border-radius: 1em;
+    overflow: hidden;
+    padding-bottom: 2em;
+    border: 1px solid #ebebeb;
 }
 
-#Projets article:nth-child(2) div:where(:nth-child(1), :nth-child(3)) picture i {
-    font-size: 1.5em;
-    cursor: pointer;
-    padding: 0.5em 0.8em;
-    background: var(--linear);
-    color: #fff;
-    border-radius: 0.5em;
+#listProject #pic figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 1em;
 }
 
-#Projets article:nth-child(2) div:where(:nth-child(1), :nth-child(3)) picture i:active {
-    outline: 3px solid #e3e3e3;
-    color: #e3e3e3;
+#listProject #pic figcaption p:nth-child(1) {
+    font-weight: 600;
+    text-transform: uppercase;
 }
+
+#listProject #pic figcaption p:nth-child(3) {
+    font-weight: 500;
+    font-size: 0.9em;
+
+    background: none !important;
+
+}
+
+#listProject img {
+    width: 25em;
+    height: 12em;
+    object-fit: cover;
+    aspect-ratio: 19/6;
+}
+
 
 #Projets article:nth-child(3) {
     display: none;
@@ -632,6 +628,13 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     flex-direction: row;
     justify-content: end;
     gap: 1em;
+}
+
+#ellipsis {
+    text-wrap: nowrap;
+    max-width: 25vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #Projets article:nth-child(3) picture i {
@@ -648,7 +651,123 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     color: #e3e3e3;
 }
 
+#projectClick {
+    position: fixed;
+    box-shadow: 0 0 3px #ebebeb;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.77);
+    display: none;
+}
 
+.displayShow {
+    display: block;
+}
+
+#projectClick section {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    gap: 0;
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    margin: 5em auto;
+    border-radius: 2em;
+    overflow: hidden;
+    padding: 2.2em 2.5em;
+}
+
+#projectClick section picture:nth-child(1) i {
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: 2em;
+    margin: 5em;
+    margin-top: -2.7em;
+    color: var(--four);
+    cursor: pointer;
+}
+
+#projectClick section picture {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 4em;
+    justify-content: left;
+}
+
+#projectClick figcaption:nth-child(1) {
+    padding: 0;
+}
+
+#projectClick img {
+    width: 40em;
+    height: 30em;
+    object-fit: cover;
+    background: #e3e3e3;
+    padding: 0.9em;
+    border-radius: 2em;
+    aspect-ratio: 16 / 9;
+
+}
+
+#projectClick figcaption:nth-child(2),
+#projectClick figcaption:nth-child(2) ul {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+#projectClick figcaption:nth-child(2) p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--four);
+}
+
+#desc {
+    background: #f4f4f4;
+    padding: 1em;
+    word-break: keep-all;
+    width: 38vw;
+    max-width: 95%;
+    font-size: 1em;
+    border-radius: 0.5em;
+}
+
+#projectClick figcaption:nth-child(2) ul {
+    margin-left: 1.5em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#techno {
+    text-transform: uppercase;
+}
+
+#projectClick figcaption:nth-child(2) ul li::marker {
+    color: var(--four);
+}
+
+#projectClick figcaption:nth-child(2) ul li p {
+    margin-top: 1em;
+}
+
+#projectClick figcaption:nth-child(2) ul li u {
+    color: var(--four);
+    text-transform: capitalize;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
 
 #articleStyle {
     scale: 1.5;
@@ -730,14 +849,15 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
 }
 
 #Experience {
-    display: none;
+    z-index: -20 !important;
+    padding-bottom: 7em;
 }
 
 #Experience article:nth-child(1) p {
     font-size: 2em;
     font-weight: 600;
     color: var(--primary);
-    padding-top: 1em;
+    padding-top: 0.5em;
     mix-blend-mode: normal;
 
 }
@@ -748,11 +868,54 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    padding: 2.5em;
-    filter: invert(100%);
-    margin-top: -0.8em;
-    margin-left: 3.5em;
-    opacity: 0.2;
+    padding: 1.8em;
+    /* filter: invert(100%); */
+    z-index: -1;
+    margin-top: -0.4em;
+    margin-left: 3em;
+    mix-blend-mode: overlay;
+}
+
+#articleExperience {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4em;
+    column-gap: 0;
+}
+
+#articleExperience picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    background: #f4f4f4;
+    /* border-top: 1px solid #000;
+    border-bottom: 1px solid #000; */
+    padding: 3em;
+    width: 38vw;
+    border-radius: 1em;
+}
+
+#articleExperience picture span {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#articleExperience picture span:nth-child(1) p:nth-child(1) {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--four);
+}
+
+#articleExperience picture span:nth-child(2) p:nth-child(2) {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--four);
 }
 
 #Apropos {
@@ -888,6 +1051,12 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     border-radius: 50%;
     color: var(--four);
     outline: 2px solid var(--linear);
+}
+
+#Apropos article:nth-child(2) picture:nth-child(1) div figure img {
+    /* background: #ffedad; */
+    text-align: center;
+    margin: 0 auto;
 }
 
 #Apropos article:nth-child(2) picture:nth-child(2) {
@@ -1035,7 +1204,7 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     background: none;
 }
 
-main section:last-child figure {
+#Contacts figure {
     background: var(--six);
     width: 90%;
     border-radius: 1em;
@@ -1050,13 +1219,13 @@ main section:last-child figure {
 }
 
 
-main section:last-child figure article picture img {
+#Contacts figure article picture img {
     width: 100%;
     height: 60vh;
     object-fit: contain;
 }
 
-main section:last-child figure article:nth-child(2) {
+#Contacts figure article:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1065,7 +1234,7 @@ main section:last-child figure article:nth-child(2) {
     width: 45%;
 }
 
-main section:last-child figure article:nth-child(2) picture {
+#Contacts figure article:nth-child(2) picture {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1073,16 +1242,16 @@ main section:last-child figure article:nth-child(2) picture {
     gap: 1em;
 }
 
-main section:last-child figure article:nth-child(2) div p {
+#Contacts figure article:nth-child(2) div p {
     font-size: 1.1em !important;
 }
 
-main section:last-child figure article:nth-child(2) h1 {
+#Contacts figure article:nth-child(2) h1 {
     font-size: 2.5em !important;
     text-transform: capitalize;
 }
 
-main section:last-child figure article:nth-child(2) picture i {
+#Contacts figure article:nth-child(2) picture i {
     font-size: 1.5em;
     cursor: pointer;
     padding: 0.3em 0.6em;
@@ -1092,11 +1261,11 @@ main section:last-child figure article:nth-child(2) picture i {
     transition: scale 0.1s;
 }
 
-main section:last-child figure article:nth-child(2) picture i:hover {
+#Contacts figure article:nth-child(2) picture i:hover {
     scale: 1.1;
 }
 
-main section:last-child figure article:nth-child(2) picture i:active {
+#Contacts figure article:nth-child(2) picture i:active {
     outline: 2px solid #fff;
 }
 

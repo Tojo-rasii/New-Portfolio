@@ -72,25 +72,43 @@
     outline: none;
 }
 
-.darkMode main section:last-child figure {
+.darkMode #Contacts figure {
     background: var(--seven);
 }
 
-.darkMode :is(#Services,#Projets,#Competences,#Apropos) article:nth-child(1) p {
+.darkMode #listProject #pic figcaption p:nth-child(3) {
+
+    background: none !important;
+
+}
+
+.darkMode :is(#Services, #Projets, #Competences, #Apropos, #Experience) article:nth-child(1) p {
     color: var(--four);
 }
+
 .darkMode #Services article picture {
     background: var(--seven);
     outline: none;
 }
-.darkMode #Services article picture i{
+
+.darkMode #Services article picture i {
     background: #0c0e16;
     outline: none;
+}
+
+.darkMode #articleExperience picture {
+    background: var(--seven);
+
 }
 
 .darkMode #Projets article:nth-child(2) div:nth-child(2) picture {
     outline: none;
     background: var(--seven);
+}
+
+.darkMode #listProject #pic {
+    background: var(--seven);
+    border: none;
 }
 
 .darkMode #Projets article:nth-child(2) div:nth-child(2) picture figcaption p:nth-child(1) {
@@ -102,6 +120,27 @@
     outline: none;
     color: #fff;
 }
+
+
+.darkMode #projectClick section {
+    background: #0f121b;
+}
+
+
+.darkMode #projectClick img {
+    width: 40em;
+    height: 30em;
+    object-fit: cover;
+    background: #0c0e16;
+    padding: 0.9em;
+    border-radius: 2em;
+}
+
+
+.darkMode #desc {
+    background: #0c0e16;
+}
+
 
 .darkMode #Competences article:nth-child(2) picture {
     background: var(--seven);
@@ -122,13 +161,15 @@
     outline: none;
     background: var(--seven);
 }
-#Apropos article:nth-child(2) picture:nth-child(2) p:nth-child(1){
+
+#Apropos article:nth-child(2) picture:nth-child(2) p:nth-child(1) {
     color: var(--four);
 }
 
 .darkMode #Apropos article:nth-child(2) picture:nth-child(2) p:nth-child(2) {
     background: var(--seven);
 }
+
 
 
 .darkMode footer section:last-child {

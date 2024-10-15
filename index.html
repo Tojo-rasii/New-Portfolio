@@ -13,23 +13,30 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="project.css">
 </head>
 
 <body>
     <div>
         <nav>
-            <article>
-                <i class="bi-envelope"></i>
-                <p>tojorasii1619@gmail.com</p>
-            </article>
-            <article>
-                <i class="bi-whatsapp"></i>
-                <p>+261344856365</p>
-            </article>
-            <article>
-                <i class="bi-github"></i>
-                <p>Tojo Rasii</p>
-            </article>
+            <a href="mailto:tojorasii1619@gmail.com" target="_blank">
+                <article>
+                    <i class="bi-envelope"></i>
+                    <p>tojorasii1619@gmail.com</p>
+                </article>
+            </a>
+            <a href="https://wa.me/261344856365" target="_blank">
+                <article>
+                    <i class="bi-whatsapp"></i>
+                    <p>+261344856365</p>
+                </article>
+            </a>
+            <a href="https://github.com/Tojo-rasii?tab=repositories" target="_blank">
+                <article>
+                    <i class="bi-github"></i>
+                    <p>Tojo Rasii</p>
+                </article>
+            </a>
         </nav>
         <header id="headerDesktop">
             <section>
@@ -149,9 +156,8 @@
                             visions numériques.</p>
 
                         <span>
-                            <button onclick="this.innerHTML = `Wait a second..<i class='bi-arrow-repeat'></i>`">Download
-                                mon Cv <i class="bi-cloud-arrow-down"></i>
-                            </button>
+                            <button><a href="TojoCv.pdf" download="Tojo_Rasii_CV">Télécharger mon CV <i
+                                        class="bi-cloud-arrow-down"></i></a></button>
                             <button class="btnProject">Voir mes projets <i class="bi-arrow-right"></i></button>
                         </span>
                     </picture>
@@ -211,32 +217,21 @@
                     <p>Mes projets</p>
                 </article>
                 <article>
-                    <div>
-                      <picture>
-                        <i class="bi-chevron-left" id="prevPage"></i>
-                      </picture>
-                    </div>
-                  
-                    <div id="listProject">
-                      <!-- List Project -->
-                    </div>
-                  
-                    <div>
-                      <picture>
-                        <i class="bi-chevron-right" id="nextPage"></i>
-                      </picture>
-                    </div>
-                  </article>
-                  
-                <article>
-                    <picture>
-                        <i class="bi-chevron-left" id="prevPageMob"></i>
-                        <i class="bi-chevron-right" id="nextPageMob"></i>
-                    </picture>
+                    <div class="wrapper">
 
+                        <i id='prevPage' class="bi-chevron-left"></i>
+
+                        <div id="listProject">
+                        </div>
+
+                        <i id='nextPage' class="bi-chevron-right"></i>
+
+
+                    </div>
                 </article>
 
             </section>
+
 
             <section id="Competences">
                 <article>
@@ -335,10 +330,58 @@
                 <article>
                     <p>Experiences</p>
                 </article>
-                <article>
-                    <p>2020 - 2021</p>
-                    <p>Assistant parlementaire</p>
-                    <p>Lorem, ipsum.</p>
+                <article id="articleExperience">
+                    <picture>
+                        <span>
+                            <p>CNTEMAD</p>
+                            <p>2021 - 2022</p>
+                        </span>
+                        <span>
+                            <p>2eme annee en Informatique</p>
+                            <p class="bi-geo-alt-fill">&nbsp; Ankadifotsy</p>
+                        </span>
+                    </picture>
+                    <picture>
+                        <span>
+                            <p>SENAT DE MADAGASCAR</p>
+                            <p>janv 2024 - Juil 2024</p>
+                        </span>
+                        <span>
+                            <p>Assistant parlementaire</p>
+                            <p class="bi-geo-alt-fill">&nbsp; Anosy</p>
+                        </span>
+                    </picture>
+                    <picture>
+                        <span>
+                            <p>FREECODECUMP</p>
+                            <p>Juin 2024</p>
+                        </span>
+                        <span>
+                            <p>Responsive Web Design</p>
+                            <p class="bi-book-half"> &nbsp; Online Course</p>
+                        </span>
+                    </picture>
+                    <picture>
+                        <span>
+                            <p>FREECODECUMP</p>
+                            <p>Juin 2024</p>
+                        </span>
+                        <span>
+                            <p>Javascript Algorithmes Data et Structure</p>
+                            <p class="bi-book-half"> &nbsp; Online Course</p>
+                        </span>
+                    </picture>
+                    <picture>
+                        <span>
+                            <p>INGENIOMIA CONSULTING</p>
+                            <p>Mars 2024 - Avril 2024</p>
+                        </span>
+                        <span>
+                            <p>Web Designer</p>
+                            <p class="bi-laptop"> &nbsp; Freelance</p>
+                        </span>
+                    </picture>
+
                 </article>
             </section>
 
@@ -350,23 +393,25 @@
                     <picture>
                         <div>
                             <figure>
-                                <i class="bi-vector-pen"></i>
+                                <img src="asset/lightbulb.png" width="55" height="55" alt="">
                                 <p>Creatif</p>
                             </figure>
+
                             <figure>
-                                <i class="bi-vector-pen"></i>
-                                <p>Compétiteur</p>
+                                <img src="asset/love.png" width="55" height="55" alt="">
+                                <p>Passioné</p>
                             </figure>
                         </div>
                         <div>
                             <figure>
-                                <i class="bi-vector-pen"></i>
-                                <p>Passione</p>
+                                <img src="asset/muscle.png" alt="" width="55" height="55">
+                                <p>Determiné</p>
                             </figure>
                             <figure>
-                                <i class="bi-vector-pen"></i>
-                                <p>Determine</p>
+                                <img src="asset/medal.png" width="55" height="55" alt="">
+                                <p>Compétiteur</p>
                             </figure>
+
                         </div>
                     </picture>
                     <picture>
@@ -376,7 +421,8 @@
                             esthétiquement plaisants.
                         </p>
                         <figcaption>
-                            <button><i class='bi-cloud-arrow-down'>&nbsp;</i>Telecharger mon cv</button>
+                            <button><a href="TojoCv.pdf" download="Tojo_Rasii_CV"><i
+                                        class='bi-cloud-arrow-down'>&nbsp;</i>Telecharger mon cv</a></button>
                         </figcaption>
 
                     </picture>
@@ -437,11 +483,16 @@
                             <p>CONTACTEZ-MOI</p>
                             <h1>VIA MES RESEAUX</h1>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatem iure aliquam
-                            rerum maiores quos consequatur. Esse, dolorum quidem deserunt eos eius,</p>
+                        <p>Vous pouvez me joindre via mes différents réseaux. Je
+                            suis disponible pour discuter de projets, d'opportunités ou répondre à vos demandes.</p>
                         <picture>
-                            <i class="bi-facebook"></i><i class="bi-linkedin"></i><i class="bi-github"></i><i
-                                class="bi-whatsapp"></i><i class="bi-discord"></i>
+                            <a href="https://www.facebook.com/tooj.ras" target="_blank"><i class="bi-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/tojo-rasamimanana-56712a277/" target="_blank"><i
+                                    class="bi-linkedin"></i></a>
+                            <a href="https://github.com/Tojo-rasii?tab=repositories" target="_blank"><i
+                                    class="bi-github"></i></a>
+                            <a href="https://wa.me/261344856365" target="_blank"><i class="bi-whatsapp"></i></a>
+                            <!-- <a href="https://www.facebook.com/tooj.ras" target="_blank"></a><i class="bi-discord"></i> -->
                         </picture>
                     </article>
                 </figure>
@@ -454,16 +505,18 @@
                     <p id="footDesc">LOREM IPSUM<br>LOREM IPSUM PIX</p>
                     <picture id="emailFoot">
                         <i class="bi-envelope"></i>
-                        <p>tojorasii1619@gmail.com</p>
+
+                        <p><a href="mailto:tojorasii1619@gmail.com" target="_blank">tojorasii1619@gmail.com</a></p>
+
                     </picture>
                 </article>
                 <article>
-                    <p>Plus d'information</p>
-                    <p>Toutes mes coordonnées</p>
+                    <p><a href="#Apropos">Plus d'information</a></p>
+                    <p><a href="#Contacts">Toutes mes coordonnées</a></p>
                 </article>
                 <article>
-                    <p>Mon curriculum vitae</p>
-                    <p>Mes projets</p>
+                    <!-- <p>Mon curriculum vitae</p> -->
+                    <p><a href="#Projets">Mes projets</a></p>
                 </article>
             </section>
             <section>
@@ -471,13 +524,14 @@
                     <p>&copy;COPYRIGHT_2024_TR_PORTFOLIO</p>
                 </article>
                 <article>
-                    <p>Created with Reactjs, Css style animate & ExpressJs(for router server)</p>
+                    <p>tout droit réservé.</p>
                 </article>
             </section>
         </footer>
 
         <button class="btnScroll bi-chevron-up"></button>
     </div>
+    <script src="paginnation.js"></script>
     <script src="project.js"></script>
     <script src="mobile.js"></script>
     <script src="script.js"></script>
