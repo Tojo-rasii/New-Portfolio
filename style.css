@@ -282,7 +282,8 @@ main section:nth-child(1) {
     align-items: center;
     gap: 4em;
     padding-top: 0;
-    z-index: -999;
+    z-index: -99999999 !important;
+
 }
 
 main section:nth-child(1) article {
