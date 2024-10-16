@@ -282,7 +282,6 @@ main section:nth-child(1) {
     align-items: center;
     gap: 4em;
     padding-top: 0;
-    z-index: -99999999 !important;
 
 }
 
@@ -390,7 +389,7 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     height: auto;
     border-bottom-left-radius: 60%;
     object-fit: cover;
-    z-index: 9999 !important;
+    z-index: 999999999999 !important;
 }
 
 #Services {
