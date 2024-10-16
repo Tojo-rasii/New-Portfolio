@@ -307,6 +307,7 @@
         margin-top: -32em;
         margin-left: 2.4em;
         fill: #f4f4f4;
+        z-index: -20 !important;
     }
 
     .wrapper {
