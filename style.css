@@ -389,7 +389,7 @@ main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
     height: auto;
     border-bottom-left-radius: 60%;
     object-fit: cover;
-    z-index: 9999;
+    z-index: 9999 !important;
 }
 
 #Services {
