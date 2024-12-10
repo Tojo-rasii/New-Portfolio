@@ -1,0 +1,90 @@
+
+footer {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+}
+
+footer section picture {
+    display: flex;
+    padding: 2em;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background: green; */
+}
+
+footer section:nth-child(1) {
+    padding: 4em 6em;
+}
+
+footer section article {
+    display: flex;
+    flex-direction: column;
+    /* background: silver; */
+    width: max-content !important;
+    gap: 1em;
+}
+
+footer section:first-child article:nth-child(2),
+footer section:first-child article:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+footer section:first-child article:nth-child(2) p,
+footer section:first-child article:nth-child(3) p {
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+footer section:first-child article:nth-child(2) p:hover,
+footer section:first-child article:nth-child(3) p:hover {
+    color: var(--four);
+}
+
+footer section:first-child article:nth-child(1) p:nth-child(1) {
+    color: var(--linear);
+    font-size: 1.5em;
+}
+
+footer section:nth-child(2) {
+    padding: 2em 5em;
+}
+
+#footDesc {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--four);
+}
+
+#emailFoot {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+#emailFoot i {
+    font-size: 1.3em;
+    color: var(--four);
+}
+
+#emailFoot p {
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#emailFoot p:hover {
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    color: var(--four);
+
+}
+
+footer section:last-child {
+    background: #fafafa;
+}

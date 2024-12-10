@@ -1,0 +1,276 @@
+#Projets {
+    margin-top: 8em;
+    padding-bottom: 7em;
+}
+
+#Projets article:nth-child(1) p {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--primary);
+    padding-top: 0.8em;
+    /* mix-blend-mode: normal; */
+    z-index: 99999;
+
+}
+
+#Projets article:nth-child(1) p::before {
+    content: '';
+    background-image: url('Group\ 50.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    padding: 1.8em;
+    /* filter: invert(100%); */
+    z-index: -1;
+    margin-top: -0.4em;
+    margin-left: 4em;
+    mix-blend-mode: overlay;
+}
+
+
+#Projets article:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    gap: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wrapper i {
+    background: var(--linear);
+    line-height: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5em;
+    height: 3em;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+}
+
+#listProject {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    background: red;
+    width: 100%;
+    overflow: auto; /* Masquer les articles hors de la zone visible */
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+/* #listProject #pic {
+    margin-left: 1em;
+} */
+
+#listProject .pic {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* width: 20em; */
+    background: #f4f4f4;
+    border-radius: 1em;
+    padding-bottom: 2em;
+    border: 1px solid #ebebeb;
+    flex: 0 0 calc(33.75% - 1em); /* Ajuste la largeur pour trois articles visibles */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#listProject .pic figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 1em;
+}
+
+#listProject .pic figcaption p:nth-child(1) {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#listProject .pic figcaption p:nth-child(3) {
+    font-weight: 500;
+    font-size: 0.9em;
+
+    background: none !important;
+
+}
+
+#listProject .pic figure img {
+    width: 25em;
+    height: 12em;
+    object-fit: cover;
+    aspect-ratio: 19/6;
+}
+
+
+#Projets article:nth-child(3) {
+    display: none;
+}
+
+#Projets article:nth-child(3) picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1em;
+}
+
+.ellipsis {
+    text-wrap: nowrap;
+    max-width: 25vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#Projets article:nth-child(3) picture i {
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0.5em 0.8em;
+    background: var(--linear);
+    color: #fff;
+    border-radius: 0.5em;
+}
+
+#Projets article:nth-child(3) picture i:active {
+    outline: 3px solid #e3e3e3;
+    color: #e3e3e3;
+}
+
+#projectClick {
+    position: fixed;
+    box-shadow: 0 0 3px #ebebeb;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.77);
+    display: none;
+}
+
+
+
+.displayShow {
+    display: block;
+}
+
+#projectClick section {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    gap: 0;
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    margin: 5em auto;
+    border-radius: 2em;
+    overflow: hidden;
+    padding: 2.2em 2.5em;
+}
+
+#projectClick section picture:nth-child(1) i {
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: 2em;
+    margin: 5em;
+    margin-top: -2.7em;
+    color: var(--four);
+    cursor: pointer;
+}
+
+#projectClick section picture {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 4em;
+    justify-content: left;
+}
+
+#projectClick figcaption:nth-child(1) {
+    padding: 0;
+}
+
+#projectClick img {
+    width: 40em;
+    height: 30em;
+    object-fit: cover;
+    background: #e3e3e3;
+    padding: 0.9em;
+    border-radius: 2em;
+    aspect-ratio: 16 / 9;
+
+}
+
+#projectClick figcaption:nth-child(2),
+#projectClick figcaption:nth-child(2) ul {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+#projectClick figcaption:nth-child(2) p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--four);
+}
+
+#desc {
+    background: #f4f4f4;
+    padding: 1em;
+    word-break: keep-all;
+    width: 38vw;
+    max-width: 95%;
+    font-size: 1em;
+    border-radius: 0.5em;
+}
+
+#projectClick figcaption:nth-child(2) ul {
+    margin-left: 1.5em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#techno {
+    text-transform: uppercase;
+}
+
+#projectClick figcaption:nth-child(2) ul li::marker {
+    color: var(--four);
+}
+
+#projectClick figcaption:nth-child(2) ul li p {
+    margin-top: 1em;
+}
+
+#projectClick figcaption:nth-child(2) ul li u {
+    color: var(--four);
+    text-transform: capitalize;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#articleStyle {
+    scale: 1.5;
+    z-index: 999;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    translate: -70% -55%;
+}

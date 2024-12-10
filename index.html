@@ -5,38 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="darkMode.css">
-    <link rel="stylesheet" href="animation.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="Mobile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="theme/darkMode.css">
+    <link rel="stylesheet" href="animation/animation.css">
+    <link rel="stylesheet" href="desktop/responsive-desktop.css">
+    <link rel="stylesheet" href="mobile/responsive-mobile.css">
+
+    <link rel="stylesheet" href="css/main-section-primary.css">
+
+    <link rel="stylesheet" href="css/experience.css">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/top-nav.css">
+    <link rel="stylesheet" href="mobile/Mobile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
 </head>
 
 <body>
     <div>
         <nav>
-            <a href="mailto:tojorasii1619@gmail.com" target="_blank">
-                <article>
-                    <i class="bi-envelope"></i>
-                    <p>tojorasii1619@gmail.com</p>
-                </article>
-            </a>
-            <a href="https://wa.me/261344856365" target="_blank">
-                <article>
-                    <i class="bi-whatsapp"></i>
-                    <p>+261344856365</p>
-                </article>
-            </a>
-            <a href="https://github.com/Tojo-rasii?tab=repositories" target="_blank">
-                <article>
-                    <i class="bi-github"></i>
-                    <p>Tojo Rasii</p>
-                </article>
-            </a>
+            <section>
+                <a href="mailto:tojorasii1619@gmail.com" target="_blank">
+                    <article>
+                        <i class="bi-envelope"></i>
+                        <p>tojorasii1619@gmail.com</p>
+                    </article>
+                </a>
+                <a href="https://wa.me/261344856365" target="_blank">
+                    <article>
+                        <i class="bi-whatsapp"></i>
+                        <p>+261344856365</p>
+                    </article>
+                </a>
+                <a href="https://github.com/Tojo-rasii?tab=repositories" target="_blank">
+                    <article>
+                        <i class="bi-github"></i>
+                        <p>Tojo Rasii</p>
+                    </article>
+                </a>
+            </section>
         </nav>
         <header id="headerDesktop">
             <section>
@@ -162,8 +175,8 @@
                         </span>
                     </picture>
 
-                    <picture>
-                        <img src="tj.png" alt="">
+                    <picture id="section-img">
+                        <img src="asset/tj.png" alt="">
                         <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 462.14 449.8">
                             <defs>
@@ -184,7 +197,7 @@
                 <article>
                     <picture class="title">
                         <i class="bi-code"></i>
-                        <p>Developpement Web Fullstack</p>
+                        <p>Developpement Front-end</p>
                     </picture>
                     <picture>
                         <i class="bi-laptop"></i>
@@ -221,7 +234,7 @@
 
                         <i id='prevPage' class="bi-chevron-left"></i>
 
-                        <div id="listProject">
+                        <div id="listProject" class="slider">
                         </div>
 
                         <i id='nextPage' class="bi-chevron-right"></i>
@@ -333,12 +346,22 @@
                 <article id="articleExperience">
                     <picture>
                         <span>
-                            <p>CNTEMAD</p>
-                            <p>2021 - 2022</p>
+                            <p>BAILTI</p>
+                            <p>2024 - Présent</p>
                         </span>
                         <span>
-                            <p>2eme annee en Informatique</p>
-                            <p class="bi-geo-alt-fill">&nbsp; Ankadifotsy</p>
+                            <p>Developpeur front-end</p>
+                            <p class="bi-geo-alt-fill">&nbsp; Remote</p>
+                        </span>
+                    </picture>
+                    <picture>
+                        <span>
+                            <p>INGENIOMIA CONSULTING</p>
+                            <p>2024 - 2024</p>
+                        </span>
+                        <span>
+                            <p>Web designer</p>
+                            <p class="bi-geo-alt-fill">&nbsp; Freelance</p>
                         </span>
                     </picture>
                     <picture>
@@ -351,7 +374,7 @@
                             <p class="bi-geo-alt-fill">&nbsp; Anosy</p>
                         </span>
                     </picture>
-                    <picture>
+                    <!-- <picture>
                         <span>
                             <p>FREECODECUMP</p>
                             <p>Juin 2024</p>
@@ -380,7 +403,7 @@
                             <p>Web Designer</p>
                             <p class="bi-laptop"> &nbsp; Freelance</p>
                         </span>
-                    </picture>
+                    </picture> -->
 
                 </article>
             </section>
@@ -497,45 +520,64 @@
                     </article>
                 </figure>
             </section>
+
+            <section>
+                <div>
+                    <article>
+                        <div id="map" style="width: 100%; height: 400px;"></div>
+
+                    </article>
+                </div>
+            </section>
         </main>
         <footer>
             <section>
-                <article>
-                    <p>TR. Portfolio</p>
-                    <p id="footDesc">LOREM IPSUM<br>LOREM IPSUM PIX</p>
-                    <picture id="emailFoot">
-                        <i class="bi-envelope"></i>
+                <picture>
+                    <article>
+                        <p>TR. Portfolio</p>
+                        <p id="footDesc">LOREM IPSUM<br>LOREM IPSUM PIX</p>
+                        <legend id="emailFoot">
+                            <i class="bi-envelope"></i>
 
-                        <p><a href="mailto:tojorasii1619@gmail.com" target="_blank">tojorasii1619@gmail.com</a></p>
+                            <p><a href="mailto:tojorasii1619@gmail.com" target="_blank">tojorasii1619@gmail.com</a></p>
 
-                    </picture>
-                </article>
-                <article>
-                    <p><a href="#Apropos">Plus d'information</a></p>
-                    <p><a href="#Contacts">Toutes mes coordonnées</a></p>
-                </article>
-                <article>
-                    <!-- <p>Mon curriculum vitae</p> -->
-                    <p><a href="#Projets">Mes projets</a></p>
-                </article>
+                        </legend>
+                    </article>
+                    <article>
+                        <p><a href="#Apropos">Plus d'information</a></p>
+                        <p><a href="#Contacts">Toutes mes coordonnées</a></p>
+                    </article>
+                    <article>
+                        <!-- <p>Mon curriculum vitae</p> -->
+                        <p><a href="#Projets">Mes projets</a></p>
+                    </article>
+                </picture>
             </section>
+
+
             <section>
-                <article>
-                    <p>&copy;COPYRIGHT_2024_TR_PORTFOLIO</p>
-                </article>
-                <article>
-                    <p>tout droit réservé.</p>
-                </article>
+                <picture>
+                    <article>
+                        <p>&copy;COPYRIGHT_2024_TR_PORTFOLIO</p>
+                    </article>
+                    <article>
+                        <p>tout droit réservé.</p>
+                    </article>
+                </picture>
             </section>
         </footer>
 
         <button class="btnScroll bi-chevron-up"></button>
     </div>
-    <script src="paginnation.js"></script>
-    <script src="project.js"></script>
-    <script src="mobile.js"></script>
-    <script src="script.js"></script>
-    <script src="darkMode.js"></script>
+    <script src="javascript/paginnation.js"></script>
+    <script src="javascript/project.js"></script>
+    <script src="mobile/mobile.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="theme/darkMode.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="javascript/location.js"></script>
+
+
 </body>
 
 </html>

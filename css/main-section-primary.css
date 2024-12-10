@@ -1,0 +1,126 @@
+
+main section:nth-child(1) {
+    max-height: 78vh;
+}
+
+main section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    padding-top: 0;
+    /* z-index: -999; */
+}
+
+main section:nth-child(1) article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap-reverse; */
+    align-items: center;
+    width: 100%;
+    padding: 1.5em 3em;
+}
+
+main section:nth-child(1) article:nth-child(1) picture:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+
+
+main section:nth-child(1) article:nth-child(1) picture p:nth-child(1) {
+    font-size: 1.3em;
+}
+
+main section:nth-child(1) article:nth-child(1) picture p:nth-child(2) {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: var(--six);
+}
+
+main section:nth-child(1) article:nth-child(1) picture p:nth-child(3) {
+    width: 60%;
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+
+main section:nth-child(1) article picture span {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+main section:nth-child(1) article picture span button {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    scale: 1;
+    transition: 0.1s;
+}
+
+main section:nth-child(1) article span button:first-child:hover {
+    scale: 1.05;
+}
+
+main section:nth-child(1) article span button:last-child:hover {
+    gap: 0.8em;
+}
+
+main section:nth-child(1) article span button:last-child:hover>.bi-arrow-right {
+    rotate: 50deg;
+}
+
+.bi-arrow-repeat {
+    animation: rotate 0.3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
+}
+
+main section:nth-child(1) article picture button a i {
+    font-size: 1.5em;
+}
+
+main section:nth-child(1) article picture button:nth-child(1) {
+    background: var(--linear);
+    color: #fff;
+}
+
+#section-img {
+    position: relative;
+}
+
+main section:nth-child(1) article:nth-child(1) picture:nth-child(2) img {
+    width: 29.5em;
+    border-radius: 40%;
+    height: auto;
+    border-bottom-left-radius: 60%;
+    object-fit: cover;
+}
+
+#Calque_1 {
+    fill: #f4f4f4;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -20;
+    margin-left: 3.5em;
+    scale: 1.04;
+}

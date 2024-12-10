@@ -1,0 +1,78 @@
+
+/* TOP HEADER */
+#headerMobile {
+    display: none;
+}
+
+#headerDesktop {
+    display: block;
+}
+
+header {
+    z-index: 99;
+    position: sticky;
+    background: var(--six);
+    top: 0;
+}
+
+header section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+header section article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5em;
+    color: #fff;
+}
+
+header section article:nth-child(2) p {
+    cursor: pointer;
+}
+
+header section i {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+header section button {
+    background: var(--linear);
+    color: #fff;
+}
+
+.active {
+    color: var(--four);
+    font-weight: 600;
+}
+
+/* .active::before {
+    content: '';
+    background-image: url('Group\ 50.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1.5em;
+    position: absolute;
+    margin-left: -0.5em;
+    z-index: -1;
+} */
+
+.active button {
+    outline: 2px solid #fff;
+    border-radius: 1em;
+}
+
+#Logo {
+    font-size: 2em;
+}
+
+#Logo span {
+    color: var(--four);
+
+}

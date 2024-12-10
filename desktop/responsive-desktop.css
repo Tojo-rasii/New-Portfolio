@@ -1,0 +1,28 @@
+@media only screen and (min-width: 1400px) {
+    nav section {
+        /* background: red; */
+        margin: 0 auto;
+        width: 92em;
+
+    }
+
+    header section {
+        margin: 0 auto;
+        width: 92em;
+
+    }
+
+    main {
+        width: 92em;
+        /* background: red; */
+        position: relative !important;
+        margin: 0 auto;
+    }
+
+
+    footer section picture {
+        /* background: red; */
+        margin: 0 auto;
+        width: 92em;
+    }
+}

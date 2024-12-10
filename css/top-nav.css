@@ -1,0 +1,39 @@
+
+/* TOP NAVBAR */
+
+nav {
+    background: #fff;
+}
+
+nav section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5em;
+    gap: 2em;
+    justify-content: end;
+    margin: 0 auto;
+}
+
+nav section article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+nav section article i {
+    padding: 0.4em 0.6em;
+    background: #f4f4f4;
+    outline: 1px solid #ebebeb;
+    color: var(--four);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+nav section article p:hover {
+    color: var(--four);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
